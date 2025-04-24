@@ -1,11 +1,127 @@
 apiVersion: v1
 entries:
+  iperf3:
+  - annotations:
+      artifacthub.io/category: networking
+      category: apps
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-04-24T10:56:00.608593372Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: iPerf3 is a tool for active measurements of the maximum achievable
+      bandwidth on IP networks. It supports tuning of various parameters related to
+      timing, buffers and protocols (TCP, UDP, SCTP with IPv4 and IPv6). For each
+      test it reports the bandwidth, loss, and other parameters.
+    digest: bc1ece82c74030562e79ade5e8ef7bdf2d971a7dc9dd7647434175aff32fde29
+    home: https://iperf.fr/
+    icon: https://iperf.fr/images/logo_iperf_command.png
+    keywords:
+    - network
+    - apps
+    - gradiant
+    - k8s
+    maintainers:
+    - email: admin@gradiant.org
+      name: Gradiant
+    name: iperf3
+    sources:
+    - https://iperf.fr/
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/iperf3/iperf3-0.1.3.tgz
+    version: 0.1.3
+  jitsi:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: stable-6865
+    created: "2025-04-24T10:56:00.612547634Z"
+    dependencies:
+    - condition: prosody.enabled
+      name: prosody
+      repository: ""
+      version: 1.2.2
+    description: 'Helm chart to deploy Jitsi on Kubernetes. '
+    digest: 63858aaec01e3397761f277ff4669a6d1075b983bb08aa16050b567742210829
+    home: https://github.com/gradiant/5g-charts
+    icon: https://jitsi.org/wp-content/uploads/2018/11/jitsi-logo-blue-grey-text.png
+    keywords:
+    - network
+    - apps
+    - k8s
+    maintainers:
+    - email: mmarquez@gradiant.org
+      name: mmarquez999
+    name: jitsi
+    sources:
+    - https://github.com/jitsi-contrib/jitsi-helm
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/jitsi/jitsi-0.0.5.tgz
+    version: 0.0.5
+  oai-enb:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v1
+    appVersion: 1.2.2
+    created: "2025-04-24T10:56:00.613973741Z"
+    description: 'OpenAirInterface enodeb '
+    digest: e8421d1cb51a955b5a9f99ca7ee5d9fe7a4354f4a4dc747c1b7db4ee275ff783
+    home: https://github.com/Gradiant/charts
+    icon: https://openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png
+    keywords:
+    - network
+    - lte
+    - enodeb
+    maintainers:
+    - email: cgiraldo@gradiant.org
+      name: cgiraldo
+    name: oai-enb
+    sources:
+    - https://gitlab.eurecom.fr/oai/openairinterface5g/
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/oai-enb/oai-enb-0.1.1.tgz
+    version: 0.1.1
+  oai-gnb:
+  - annotations:
+      artifacthub.io/category: networking
+      category: apps
+    apiVersion: v2
+    appVersion: 2021.w32
+    created: "2025-04-24T10:56:00.617387849Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: description
+    digest: 6bbe9c3d99d0c378522ef96157c1b6d3cc2939ec04d044d62b30b200c91cedb2
+    home: https://openairinterface.org/
+    icon: https://openairinterface.org/wp-content/uploads/2020/11/cropped-android-chrome-512x512-1-270x270.png
+    keywords:
+    - network
+    - apps
+    - gradiant
+    - k8s
+    maintainers:
+    - email: admin@gradiant.org
+      name: Gradiant
+    name: oai-gnb
+    sources:
+    - https://gitlab.eurecom.fr/oai/openairinterface5g/
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/oai-gnb/oai-gnb-0.3.2.tgz
+    version: 0.3.2
   open5gs:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.133673497Z"
+    created: "2025-04-24T10:56:00.60536348Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -102,7 +218,7 @@ entries:
       repository: file://../open5gs-webui
       version: ~2.2.8
     description: 'Helm chart to deploy Open5gs services on Kubernetes. '
-    digest: 8e6c028399cac770f214e50acaad6e640b71472304ca06703a3f9204da5158ac
+    digest: 9ce09a8fd0ebf78441bc3951de45580f63f6c9d66f42848db1cbdf94fccee08e
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -117,14 +233,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-2.2.8.tgz
     version: 2.2.8
   open5gs-amf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.137391568Z"
+    created: "2025-04-24T10:56:00.621933095Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -132,7 +248,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs AMF service on Kubernetes. '
-    digest: 1d2ac96f783f8765216cf3519802b5d75a0e32f0f7bd5a42ed8d3abc33e0699f
+    digest: eaf9a405e339b7533a6dc9cdf46492885e84952f259bb57fe791670710e9d150
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -146,14 +262,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-amf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-amf/open5gs-amf-2.2.8.tgz
     version: 2.2.8
   open5gs-ausf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.139031787Z"
+    created: "2025-04-24T10:56:00.625673582Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -161,7 +277,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs AUSF service on Kubernetes. '
-    digest: ca27fde97152fb854e21493aceab115bde2cb92e8c555b8e402c26f455ed943d
+    digest: e1440f6b37197b1b6f6969b459bbf3232af6f4e3e307983485135e137ad23e1f
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -174,14 +290,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-ausf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-ausf/open5gs-ausf-2.2.8.tgz
     version: 2.2.8
   open5gs-bsf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.140881716Z"
+    created: "2025-04-24T10:56:00.629460159Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -189,7 +305,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs BSF service on Kubernetes. '
-    digest: cce786023339eb46177aae7ff962dc8d3b813f15faf3552766313b1726cbe42d
+    digest: 61d0ef301b1293dc819f3ea77a3dfe3c3619cd490321e087932de6e46a5fd3c5
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -202,14 +318,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-bsf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-bsf/open5gs-bsf-2.2.8.tgz
     version: 2.2.8
   open5gs-hss:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.142902315Z"
+    created: "2025-04-24T10:56:00.642639144Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -221,7 +337,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: ~12.1.19
     description: 'Helm chart to deploy Open5gs HSS service on Kubernetes. '
-    digest: ee2f0170b02a1f1dee0f50c5d81bbb4955428e6284f3a6b6a050065e2f525a3c
+    digest: 01b733774d265ee27f255a083f7011b9f0ae029d0a2eeb63b746538998b6feec
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -236,14 +352,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-hss-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-hss/open5gs-hss-2.2.8.tgz
     version: 2.2.8
   open5gs-mme:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.145458581Z"
+    created: "2025-04-24T10:56:00.646727019Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -251,7 +367,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs MME service on Kubernetes. '
-    digest: 3064c7a2646fa22799a2274bc6f95aaad430512e37f6fba0a8a286ebb5620464
+    digest: 1c82995f97f1ad8a8727f55675a91ef6759a223f753e05ab7aef966f71a0f421
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -265,14 +381,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-mme-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-mme/open5gs-mme-2.2.8.tgz
     version: 2.2.8
   open5gs-nrf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.148658957Z"
+    created: "2025-04-24T10:56:00.650621718Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -280,7 +396,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs NRF service on Kubernetes. '
-    digest: 1cb92930e027788f2ebd1ac916606c13129079e9ee41a9179fb541490157da41
+    digest: ab8c32c9e36a78bccb2f6934a7beb22c4a2756d9a36bea739520987d8d97ffcd
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -294,14 +410,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-nrf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-nrf/open5gs-nrf-2.2.8.tgz
     version: 2.2.8
   open5gs-nssf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.150883497Z"
+    created: "2025-04-24T10:56:00.656454736Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -309,7 +425,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs NSSF service on Kubernetes. '
-    digest: c91aabdcb6e880941cfde2d0ee95073dbfba93341d460be5d22dd5c785098d4d
+    digest: 601cc1b681c1fa3200d0ba8aa0f412e836fe5bc82da08e65b6f203accaa5b649
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -322,14 +438,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-nssf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-nssf/open5gs-nssf-2.2.8.tgz
     version: 2.2.8
   open5gs-pcf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.153549877Z"
+    created: "2025-04-24T10:56:00.675836788Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -341,7 +457,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: ~12.1.19
     description: 'Helm chart to deploy Open5gs PCF service on Kubernetes. '
-    digest: d1238494d23fb2e9effb39d7f98bb82ca1beb0b2c31d75c00bd349b0939c3b2a
+    digest: 340ea663915b6f172319b0ae6ac760fcc62dddb9d15d86d8f4ef6106314a5dff
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -355,14 +471,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-pcf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-pcf/open5gs-pcf-2.2.8.tgz
     version: 2.2.8
   open5gs-pcrf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.15577195Z"
+    created: "2025-04-24T10:56:00.693363551Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -374,7 +490,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: ~12.1.19
     description: 'Helm chart to deploy Open5gs PCRF service on Kubernetes. '
-    digest: 184f4d40273611635c6b029a8e726f2a0937b3ab08da8a1f794f760b7a334111
+    digest: 25ac36d87039a8edc600ba42911cbe425d840f1486c4978cc524249b8ebcdefb
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -389,14 +505,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-pcrf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-pcrf/open5gs-pcrf-2.2.8.tgz
     version: 2.2.8
   open5gs-scp:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.158882647Z"
+    created: "2025-04-24T10:56:00.709584344Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -408,7 +524,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: ~12.1.19
     description: 'Helm chart to deploy Open5gs scp service on Kubernetes. '
-    digest: bd99d648bb3e7e8cc8bccd00f7dead73fd0fb5693111100d55999b5542177bb0
+    digest: d2c94e0e524dfeeb491cbd55f29b9fa4ca78617d6a7adca7f28c611b5874beb0
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -423,14 +539,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-scp-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-scp/open5gs-scp-2.2.8.tgz
     version: 2.2.8
   open5gs-sgwc:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.160677306Z"
+    created: "2025-04-24T10:56:00.713280296Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -438,7 +554,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs SGWC service on Kubernetes. '
-    digest: 061395402934763bf0bd60468ea3580fb1dd6577b5d1be9efb45b004dd169c7f
+    digest: d2b69d5549021681428c5542b6b69a6d0649930a5393b05abd31768fe560bc4f
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -451,14 +567,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-sgwc-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-sgwc/open5gs-sgwc-2.2.8.tgz
     version: 2.2.8
   open5gs-sgwu:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.162290697Z"
+    created: "2025-04-24T10:56:00.717311834Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -466,7 +582,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs SGWU service on Kubernetes. '
-    digest: 626edf407f3f31219960d86cdcf9d30f7de2f7dc772aeb3faedcce0e7e7f3e0f
+    digest: 5c5b62d24a139548d524692aa6b71b50d023454e28afafa69e7a70e1b8d28624
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -479,14 +595,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-sgwu-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-sgwu/open5gs-sgwu-2.2.8.tgz
     version: 2.2.8
   open5gs-smf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.165557612Z"
+    created: "2025-04-24T10:56:00.721309002Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -494,7 +610,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs SMF service on Kubernetes. '
-    digest: 5626fdaff3749c866cf8e1bbee3cf808e1df360066d439b80ce787f983f4d5bc
+    digest: 9f2457cdc1e7e508f912b68d9e89e1ce882a77cafeace6f78536f33aac9a995a
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -507,14 +623,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-smf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-smf/open5gs-smf-2.2.8.tgz
     version: 2.2.8
   open5gs-udm:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.167266496Z"
+    created: "2025-04-24T10:56:00.724597743Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -522,7 +638,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs UDM service on Kubernetes. '
-    digest: f999bc16b1b5db59b22ca44e572ee8a10449aaef3967b4098cf81e66344c512c
+    digest: aac1483e67c4d6515ce1eb9006bbb4f3d97724470b54f1ef5ba42899aa0f2ec5
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -536,14 +652,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-udm-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-udm/open5gs-udm-2.2.8.tgz
     version: 2.2.8
   open5gs-udr:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.169009051Z"
+    created: "2025-04-24T10:56:00.743656685Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -555,7 +671,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: ~12.1.19
     description: 'Helm chart to deploy Open5gs UDR service on Kubernetes. '
-    digest: 2698d266f9c740561962aca6d6f76a495c5acd6c20eb1205c5b4e9b05f7ad49f
+    digest: 27802711a13ebfcf7205bf092bbee0482461979899828e955c64201485966b17
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -569,14 +685,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-udr-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-udr/open5gs-udr-2.2.8.tgz
     version: 2.2.8
   open5gs-upf:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.170967814Z"
+    created: "2025-04-24T10:56:00.749733737Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -584,7 +700,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: 'Helm chart to deploy Open5gs UPF service on Kubernetes. '
-    digest: 9ea1dfa4db44b27c70e8da6a1fee0909a4125db73df6cfc37edee793254631be
+    digest: c016c3237a8d8dbc453c7ea06c1ee5c064058ed9f1c04646e9f63a24e76f191c
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -598,14 +714,14 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-upf-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-upf/open5gs-upf-2.2.8.tgz
     version: 2.2.8
   open5gs-webui:
   - annotations:
       artifacthub.io/category: networking
     apiVersion: v2
     appVersion: 2.7.4
-    created: "2025-04-24T10:53:13.173042566Z"
+    created: "2025-04-24T10:56:00.760420281Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -617,7 +733,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: ~12.1.19
     description: 'Helm chart to deploy Open5gs WebUI service on Kubernetes. '
-    digest: 04ecc4f8edacfb0352f3e61a49ba1a1e0c4fb6051b5577393eb1726ff0518315
+    digest: 776aa2d7f2636a451df534d88279ab6d0592cc159c7ffe586e65f8bfc3f3ba47
     home: https://github.com/gradiant/5g-charts
     icon: https://open5gs.org/assets/img/open5gs-logo.png
     keywords:
@@ -633,15 +749,180 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/open5gs-webui-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-webui/open5gs-webui-2.2.8.tgz
     version: 2.2.8
+  packetrusher:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v2
+    appVersion: 97f9f0c
+    created: "2025-04-24T10:56:00.764072662Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: 'Helm chart to deploy PacketRusher service on Kubernetes. '
+    digest: 339d3f52886b08dc8aefd92fe56820d2b92792b076836610e921e3900f45d6df
+    home: https://github.com/gradiant/5g-charts
+    keywords:
+    - network
+    - gnb
+    - ue
+    - gradiant
+    maintainers:
+    - email: avrodriguez@gradiant.org
+      name: avrodriguez
+    name: packetrusher
+    sources:
+    - https://github.com/HewlettPackard/PacketRusher
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/packetrusher/packetrusher-0.0.2.tgz
+    version: 0.0.2
+  srs-epc:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v1
+    appVersion: "23.11"
+    created: "2025-04-24T10:56:00.766032098Z"
+    description: 'SRS epc '
+    digest: a342ff7ace84af1b0427461efa45012d8682444325c42ef51a9fc314475bcfa9
+    home: https://github.com/gradiant/5g-charts
+    icon: https://docs.srsran.com/en/latest/_static/logo.png
+    keywords:
+    - network
+    - epc
+    maintainers:
+    - email: cgiraldo@gradiant.org
+      name: cgiraldo
+    name: srs-epc
+    sources:
+    - https://github.com/srsran/srsRAN_4G
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/srs-epc/srs-epc-0.2.1.tgz
+    version: 0.2.1
+  srs-ue:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v1
+    appVersion: "23.11"
+    created: "2025-04-24T10:56:00.768239766Z"
+    description: 'SRS ue '
+    digest: ef0104c918ebc3b4ab47142832e9ba71696c5ed7cb2efdefebbd742de5d57a29
+    home: https://github.com/Gradiant/charts
+    icon: https://docs.srsran.com/en/latest/_static/logo.png
+    keywords:
+    - network
+    - lte
+    - ue
+    maintainers:
+    - email: cgiraldo@gradiant.org
+      name: cgiraldo
+    name: srs-ue
+    sources:
+    - https://github.com/srsran/srsRAN_4G
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/srs-ue/srs-ue-0.2.0.tgz
+    version: 0.2.0
+  srsran-4g-enb:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v1
+    appVersion: "23.11"
+    created: "2025-04-24T10:56:00.770370386Z"
+    description: 'srsRAN enodeb '
+    digest: f4a9af16eef30baf7fb0801f9b1f0304e065b88b95cb7af3b139b1e6f6d3f1ce
+    home: https://github.com/Gradiant/charts
+    icon: https://docs.srsran.com/en/latest/_static/logo.png
+    keywords:
+    - network
+    - lte
+    - enodeb
+    maintainers:
+    - email: cgiraldo@gradiant.org
+      name: cgiraldo
+    name: srsran-4g-enb
+    sources:
+    - https://github.com/srsran/srsRAN_4G
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/srsran-4g/srsran-4g-enb-0.2.0.tgz
+    version: 0.2.0
+  srsran-4g-zmq:
+  - annotations:
+      artifacthub.io/category: networking
+    apiVersion: v1
+    appVersion: "23.11"
+    created: "2025-04-24T10:56:00.77294406Z"
+    description: 'srsRAN4g enodeb + ue. srsRAN4g enodeb + ue. '
+    digest: e9f11cbf63e40b4713cb01b886d9be06183214fd9a42a233e26741081942d579
+    home: https://github.com/Gradiant/charts
+    icon: https://docs.srsran.com/en/latest/_static/logo.png
+    keywords:
+    - network
+    - lte
+    - enodeb
+    maintainers:
+    - email: cgiraldo@gradiant.org
+      name: cgiraldo
+    name: srsran-4g-zmq
+    sources:
+    - https://github.com/srsran/srsRAN_4G
+    - https://github.com/srsran/srsRAN_4G
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/srsran-4g-zmq/srsran-4g-zmq-0.2.0.tgz
+    version: 0.2.0
+  srsran-5g:
+  - apiVersion: v2
+    appVersion: 23.10.1
+    created: "2025-04-24T10:56:00.778146554Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: 'Helm chart to deploy srsRAN 5G gNB on Kubernetes. '
+    digest: 4f8dc048f86083a928d06349a01294e8cc8f0881415c09906b6a0ff71e3dd0a4
+    maintainers:
+    - email: avrodriguez@gradiant.org
+      name: avrodriguez
+    name: srsran-5g
+    sources:
+    - https://github.com/gradiant/5g-charts
+    - https://github.com/srsran/srsRAN_Project
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/srsran-5g/srsran-5g-1.0.0.tgz
+    version: 1.0.0
+  srsran-5g-zmq:
+  - apiVersion: v2
+    appVersion: 23.10.1
+    created: "2025-04-24T10:56:00.783390866Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: 'Helm chart to deploy srsRAN 5G gNB on Kubernetes. '
+    digest: 1447248c8a15e0aee03fa5a85dbc13a83b22f85cc9a721ddb88db27b0f0d7f74
+    maintainers:
+    - email: avrodriguez@gradiant.org
+      name: avrodriguez
+    name: srsran-5g-zmq
+    sources:
+    - https://github.com/gradiant/5g-charts
+    - https://github.com/srsran/srsRAN_Project
+    urls:
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/srsran-5g-zmq/srsran-5g-zmq-1.0.1.tgz
+    version: 1.0.1
   ueransim-gnb:
   - annotations:
       artifacthub.io/category: networking
       category: apps
     apiVersion: v2
     appVersion: 3.2.6
-    created: "2025-04-24T10:53:13.176180934Z"
+    created: "2025-04-24T10:56:00.787762214Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -649,7 +930,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: ueransim gNodeB for 5G RAN simulation
-    digest: 68549713904d1aee67604d89ef315293c54e8baacd615199cca878a1e73caf46
+    digest: 111127207166ce9d4cf7d44eefb7120a963cb774cb90d4398b15cf38f4a8b05e
     home: https://github.com/aligungr/UERANSIM
     icon: https://github.com/aligungr/UERANSIM/raw/master/.github/logo.png
     keywords:
@@ -666,7 +947,7 @@ entries:
     sources:
     - https://github.com/aligungr/UERANSIM
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/ueransim-gnb-0.2.6.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/ueransim-gnb/ueransim-gnb-0.2.6.tgz
     version: 0.2.6
   ueransim-ues:
   - annotations:
@@ -674,7 +955,7 @@ entries:
       category: apps
     apiVersion: v2
     appVersion: 3.2.6
-    created: "2025-04-24T10:53:13.17835838Z"
+    created: "2025-04-24T10:56:00.792312749Z"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -682,7 +963,7 @@ entries:
       - bitnami-common
       version: 1.x.x
     description: ueransim UEs for 5G RAN simulation
-    digest: 478f1df84929cbf45c52051443820942cce9cca79431417bb8f89972342e0b4a
+    digest: a3193c48e65bb23bf499916394de84467f611b2a747d9c0b9ce8f44977381592
     home: https://github.com/aligungr/UERANSIM
     icon: https://github.com/aligungr/UERANSIM/raw/master/.github/logo.png
     keywords:
@@ -699,6 +980,6 @@ entries:
     sources:
     - https://github.com/aligungr/UERANSIM
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-tgz/ueransim-ues-0.1.2.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/ueransim-ues/ueransim-ues-0.1.2.tgz
     version: 0.1.2
-generated: "2025-04-24T10:53:13.082886507Z"
+generated: "2025-04-24T10:56:00.460820829Z"
