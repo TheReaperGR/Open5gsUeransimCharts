@@ -236,7 +236,7 @@ entries:
     sources:
     - http://open5gs.org
     urls:
-    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-2.2.8.tgz
+    - https://thereapergr.github.io/Open5gsUeransimCharts/charts/open5gs-2.2.8_1.tgz
     version: 2.2.8
   open5gs-amf:
   - annotations:
