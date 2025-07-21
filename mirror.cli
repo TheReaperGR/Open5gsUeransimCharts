@@ -33,8 +33,6 @@ set / network-instance default
 set / network-instance default interface ethernet-1/1.0
 set / network-instance default interface ethernet-1/2.0
 
-# ─── System Information ────────────────────────────────────────────────────
-set / system information location {{.Env.SRL_LOCATION}}
 
 # ─── Mirroring Configuration ───────────────────────────────────────────────
 set / system mirroring mirroring-instance 1 admin-state enable
